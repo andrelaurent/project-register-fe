@@ -1,0 +1,551 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary-light: 255, 203, 137;
+        --primary-200: 255, 187, 100;
+        --primary-main: 251, 153, 28;
+        --primary-dark: 233, 138, 17;
+        --primary-800: 172, 96, 0;
+    
+        --secondary-light: 237, 231, 246;
+        --secondary-200: 179, 157, 219;
+        --secondary-main: 103, 58, 183;
+        --secondary-dark: 94, 53, 177;
+        --secondary-800: 69, 39, 160;
+
+        --success-light: 185, 246, 202;
+        --success-200: 105, 240, 174;
+        --success-main: 105, 240, 174;
+        --success-dark: 0, 200, 83;
+
+        --error-light: 239, 154, 154;
+        --error-main: 244, 67, 54;
+        --error-dark: 198, 40, 40;
+
+        --warning-light: 185, 246, 202;
+        --warning-main: 255, 229, 127;
+        --warning-dark: 255, 193, 7;
+
+        --grey-50: 250, 250, 250;
+        --grey-100: 245, 245, 245;
+        --grey-200: 238, 238, 238;
+        --grey-300: 224, 224, 224;
+        --grey-500: 158, 158, 158;
+        --grey-600: 117, 117, 117;
+        --grey-700: 97, 97, 97;
+        --grey-900: 33, 33, 33;
+
+        --theme-bg-base: 255, 255, 255;
+        --theme-text-base: var(--grey-900);
+        --select-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-selector' width='24' height='24' viewBox='0 0 24 24' stroke-width='1' stroke='black' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpolyline points='8 9 12 5 16 9' /%3E%3Cpolyline points='16 15 12 19 8 15' /%3E%3C/svg%3E");
+    }
+
+    .container {
+        @apply px-[3%];
+        @apply w-full;
+    }
+
+    .button-primary-light {
+        @apply bg-primary-light;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+    }
+
+    .button-primary-light:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-primary-main {
+        @apply bg-primary-main;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-primary-main:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-primary-dark {
+        @apply bg-primary-dark;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-primary-dark:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-primary-800 {
+        @apply bg-primary-800;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-primary-800:hover {
+        @apply bg-opacity-100
+    }
+    
+    .button-secondary-light {
+        @apply bg-secondary-light;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+    }
+
+    .button-secondary-light:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-secondary-main {
+        @apply bg-secondary-main;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-secondary-main:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-secondary-dark {
+        @apply bg-secondary-dark;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-secondary-dark:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-secondary-800 {
+        @apply bg-secondary-800;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-secondary-800:hover {
+        @apply bg-opacity-100
+    }
+
+    
+    .button-success-main {
+        @apply bg-success-main;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-success-main:hover {
+        @apply bg-opacity-100
+    }
+
+    
+    .button-success-dark {
+        @apply bg-success-dark;
+        @apply bg-opacity-80;
+        @apply duration-200;
+        @apply rounded-md;
+        @apply text-white;
+    }
+
+    .button-success-dark:hover {
+        @apply bg-opacity-100
+    }
+
+    .button-border-primary {
+        @apply duration-200;
+        @apply transition-all;
+        @apply border;
+        @apply border-solid;
+        @apply border-primary-main;
+        @apply text-primary-main;
+        @apply rounded-md;
+    }
+
+    .button-border-primary:hover {
+        @apply bg-primary-main;
+        @apply bg-opacity-20;
+    }
+
+    .button-border-error {
+        @apply duration-200;
+        @apply transition-all;
+        @apply border;
+        @apply border-solid;
+        @apply border-error-main;
+        @apply text-error-main;
+        @apply rounded-md;
+    }
+
+    .button-border-error:hover {
+        @apply bg-error-main;
+        @apply bg-opacity-20;
+    }
+
+    label {
+        @apply duration-200;
+        @apply transition-all;
+    }
+
+    /* ================= INPUT & SELECT DEFAULT CSS ======================= */
+    input {
+        @apply duration-200;
+        @apply transition-all;
+        @apply font-roboto;
+        @apply bg-transparent;
+    }
+
+    textarea {
+        @apply duration-200;
+        @apply transition-all;
+        @apply font-roboto;
+        @apply bg-transparent;
+        @apply overflow-hidden;
+    }
+
+    select {
+        @apply duration-200;
+        @apply transition-all;
+        @apply font-roboto;
+        @apply bg-transparent;
+    }
+
+    /* ================ INPUT BASE THEME =================== */
+
+    .input-base {
+        @apply input-primary-main;
+    }
+
+    /* ================ INPUT THEME 1 =============== */
+
+    .input-base[data-theme="1"] {
+        @apply gap-0;
+        @apply min-h-[70px];
+        @apply h-[70px];
+    }
+
+    .input-base[data-theme="1"] > .field {
+        @apply flex-col;
+    }
+
+    .input-base[data-theme="1"] label {
+        @apply px-5;
+        @apply pt-[10px];
+    }
+
+    .input-base[data-theme="1"] input {
+        @apply h-full;
+        @apply px-5;   
+    }
+
+    .input-base[data-theme="1"] select {
+        @apply h-full;
+        @apply px-5;   
+        @apply border-none;
+    }
+
+    .input-base[data-theme="1"] textarea {
+        @apply h-full;
+        @apply px-5;
+        @apply py-3;
+        @apply border-none;
+    }
+
+    /* ================ INPUT THEME 2 =============== */
+
+    .input-base[data-theme="2"] {
+        @apply flex-row;
+        @apply overflow-visible;
+        @apply border-none;
+        @apply min-h-[50px];
+    }
+
+    .input-base[data-theme="2"] > .field {
+        @apply gap-2;
+    }
+
+    .input-base[data-theme="2"] label {
+        @apply min-w-[25%];
+        @apply my-auto;
+    }
+
+    .input-base[data-theme="2"] input, select, textarea {
+        @apply border border-solid rounded-main p-3 h-full;
+    }
+
+    
+    /* ================ INPUT THEME 3 =============== */
+
+    .input-base[data-theme="3"] {
+        @apply flex-col;
+        @apply border-none;
+        @apply overflow-visible;
+        @apply min-h-[70px];
+    }
+
+    .input-base[data-theme="3"] > .field {
+        @apply flex-col;
+        @apply w-full;
+        @apply gap-1;
+    }
+
+    .input-base[data-theme="3"] input, select, textarea {
+        @apply border border-solid rounded-main p-3 h-full;
+    }
+
+    /* ========= INPUT PRIMARY MAIN ====================== */
+
+    .input-primary-main {
+        @apply rounded-main;
+        @apply overflow-hidden;
+        @apply relative;
+        @apply flex;
+        @apply w-full;
+        @apply font-roboto;
+        @apply border;
+        @apply border-solid;
+        @apply border-grey-300;
+        @apply duration-200;
+        @apply transition-all;
+    }
+
+    .input-primary-main > .field {
+        @apply flex;
+        @apply w-full;
+        @apply h-full;
+    }
+
+    .input-primary-main label {
+        @apply text-xs;
+        @apply text-grey-500;
+    }
+
+    .input-primary-main input, select, textarea {
+        @apply text-sm;
+        @apply w-full;
+    }
+
+    .input-primary-main input:hover, select:hover, textarea:hover {
+        @apply border-grey-700;
+    }
+
+    .input-primary-main input:focus, select:focus, textarea:focus {
+        @apply border-primary-main;
+    }
+
+    .input-primary-main:hover {
+        @apply border-grey-700;
+    }
+
+    .input-primary-main:focus-within {
+        @apply border-primary-main;
+    }
+
+    .input-primary-main:has(input:focus) label {
+        @apply text-primary-main;
+    }
+
+    .input-primary-main:has(select:focus) label {
+        @apply text-primary-main;
+    }
+
+    .input-primary-main:has(textarea:focus) label {
+        @apply text-primary-main;
+    }
+
+    /* ======================= END HERE ============================== */
+    
+    input[type='checkbox'] {
+        @apply appearance-none;
+        @apply min-w-[1.5rem];
+        @apply min-h-[1.5rem];
+        @apply border;
+        @apply border-solid;
+        @apply border-grey-500;
+        @apply rounded-md;
+        @apply checked:border-none;
+        @apply checked:bg-primary-main;
+        @apply focus:ring-2;
+        @apply focus:ring-offset-2;
+        @apply focus:ring-primary-main;
+        @apply relative;
+        @apply transition-all;
+        @apply duration-200;
+    }
+
+    input[type='checkbox']:checked::after {
+        @apply absolute;
+        @apply top-[3px];
+        @apply left-0;
+        @apply w-full;
+        @apply h-full;
+        @apply flex;
+        @apply justify-center;
+        @apply self-center;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-check' width='18' height='18' viewBox='0 0 24 24' stroke-width='3' stroke='white' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 12l5 5l10 -10' /%3E%3C/svg%3E")
+    }
+
+    
+    input[type='radio'] {
+        @apply appearance-none;
+        @apply w-5;
+        @apply h-5;
+        @apply border;
+        @apply border-solid;
+        @apply border-grey-500;
+        @apply rounded-full;
+        @apply checked:border-none;
+        @apply checked:bg-primary-main;
+        @apply focus:ring-2;
+        @apply focus:ring-offset-2;
+        @apply focus:ring-primary-main;
+        @apply relative;
+        @apply transition-all;
+        @apply duration-200;
+    }
+    
+    input[type='radio']:checked::after {
+        @apply absolute;
+        @apply top-[1px];
+        @apply left-0;
+        @apply w-full;
+        @apply h-full;
+        @apply flex;
+        @apply justify-center;
+        @apply self-center;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-check' width='18' height='18' viewBox='0 0 24 24' stroke-width='3' stroke='white' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 12l5 5l10 -10' /%3E%3C/svg%3E")
+    }
+
+    .theme-base {
+        @apply bg-theme-bg-base;
+        @apply text-theme-text-base;
+        @apply transition-all;
+        @apply duration-200;
+    }
+
+    .sidebar {
+        @apply theme-base;
+        @apply transition-all;
+        @apply duration-200;
+        @apply md:mt-0;
+        @apply lg:mt-[5rem];
+        @apply fixed;
+        @apply left-0;
+        @apply top-0;
+        @apply md:h-screen;
+        @apply lg:h-[calc(100vh_-_5rem)];
+        @apply h-screen;
+        @apply md:z-[2];
+        @apply lg:z-[1];
+        @apply z-[2];
+        @apply flex;
+        @apply flex-col;
+        @apply w-[16rem];
+    }
+
+    /* ====================== SWITCH ============================= */
+    
+    .switch-container {
+        @apply flex gap-2 w-full;
+    }
+
+    .switch-container > label {
+        @apply my-auto text-xs min-w-[25%] text-grey-500;
+    }
+
+    .switch {
+        @apply relative;
+        @apply h-[35px];
+        @apply w-[65px];
+        @apply rounded-[100px];
+        @apply overflow-hidden;
+    }
+
+    .switch > .switch-checkbox {
+        @apply relative;
+        @apply w-full; 
+        @apply h-full;
+        @apply opacity-0;
+        @apply cursor-pointer;
+        @apply p-0 m-0;
+        @apply z-[3];
+        @apply bg-transparent;
+    }
+
+    .switch > .knobs {
+        @apply z-[2];
+        @apply absolute;
+        @apply left-0;
+        @apply top-0;
+        @apply w-full;
+        @apply h-full;
+        @apply p-1;
+    }
+
+    .switch > .layer {
+        @apply w-full h-full;
+        @apply z-[1];
+        @apply bg-white;
+        @apply absolute;
+        @apply top-0;
+        @apply left-0;
+        transition: 0.3s ease all;
+    }
+    
+    .switch > .knobs::before {
+        @apply absolute;
+        @apply h-4/5;
+        @apply aspect-square;
+        @apply text-white;
+        @apply text-[10px];
+        @apply text-center;
+        @apply flex justify-center items-center;
+        @apply rounded-full;
+        transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    }
+
+    
+    .switch .switch-checkbox:checked + .knobs:before {
+        content: "YES";
+        left: 0.25rem;
+        @apply bg-success-dark;
+    }
+
+    .switch .switch-checkbox + .knobs:before {
+        content: "NO";
+        right: 0.25rem;
+        @apply bg-error-main;
+    }
+    
+    .switch:has(.switch-checkbox) > .layer {
+        @apply bg-error-light;
+        @apply bg-opacity-50;
+    }
+    
+    .switch:has(.switch-checkbox:checked) > .layer {
+        @apply bg-success-200;
+        @apply bg-opacity-50;
+    }
+
+    .switch .switch-checkbox:active + .knobs:before {
+        @apply w-3/4;
+        @apply rounded-[100px];
+    }
+    /* ================= END HERE ===================== */
+}

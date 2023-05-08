@@ -1,0 +1,51 @@
+.ag-theme-material {
+    --ag-header-height: 20px;
+    --ag-background-color: rgb(var(--theme-bg-base)) !important;
+    --ag-header-background-color: rgb(var(--theme-bg-base)) !important;
+    --ag-data-color: rgb(var(--theme-text-base)) !important;
+    // --ag-header-foreground-color: white;
+    --ag-header-cell-hover-background-color: rgba(var(--grey-300), 0.5) !important;
+    --ag-row-hover-color: rgba(var(--grey-300), 0.5) !important;
+    --ag-column-hover-color: rgba(var(--grey-300), 0.5) !important;
+    --ag-header-cell-moving-background-color: rgba(var(--grey-300), 0.5) !important;
+}
+
+.ag-theme-material .ag-header-cell {
+    color: rgb(var(--theme-text-base)) !important;
+}
+
+.ag-theme-material .ag-header-cell {
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+
+.ag-filter-apply-panel {
+    gap: 1rem;
+    button {
+        color: rgb(var(--primary-dark)) !important;
+    }
+}
+
+
+// ============================ HEADER CENTER ========================================= //
+
+.ag-header-text-center {
+    .ag-header-cell-text {
+        margin: auto
+    }
+}
+
+
+// ============================= OVERFLOW DROPDOWN BUTTON ============================== //
+.ag-row {
+    z-index: 0;
+}
+
+.ag-row.ag-row-focus {
+    z-index: 1;
+}
+
+// .ag-root, .ag-body-viewport, .ag-body-viewport-wrapper {
+//     overflow: visible !important;
+// }

@@ -1,0 +1,87 @@
+.ql-toolbar {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    transition: all;
+    transition-duration: 200;
+    span {
+        transition: all;
+        transition-duration: 200;
+        color: rgb(var(--theme-text-base));
+    }
+    .ql-picker-label {
+        display: flex !important;
+    }
+    button {
+        transition: all;
+        transition-duration: 200;
+        display: flex !important;
+    }
+}
+
+// .ql-container {
+//     border: none !important;
+// }
+
+// .quill {
+//     border: 1px solid rgb(var(--grey-300));
+//     border-radius: var(--rounded-main);
+//     overflow: visible;
+//     transition: all;
+//     transition-duration: 200;
+// }
+
+// .ql-picker-options {
+//     background: rgb(var(--theme-bg-base)) !important;
+// }
+
+// .quill:hover {
+//     border-color: rgb(var(--grey-700));
+//     .ql-toolbar {
+//         border-bottom: 1px solid rgb(var(--grey-700)) !important;
+//     }
+// }
+
+// .quill:has(.ql-editor:focus) {
+//     border-color: rgb(var(--primary-main));
+//     .ql-toolbar {
+//         border-bottom: 1px solid rgb(var(--primary-main)) !important;
+//     }
+// }
+
+.ql-toolbar {
+    border: none !important;
+}
+
+.ql-container {
+    height: auto !important;
+    border: none !important;
+}
+
+.ql-editor {
+    min-height: 100px;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+}
+
+.input-base[data-theme="2"], .input-base[data-theme="3"] {
+    .quill {
+        border: 1px solid rgb(var(--grey-300));
+    }
+}
+
+.input-base[data-theme="2"], .input-base[data-theme="3"] {
+    .quill:hover {
+        border-color: rgb(var(--grey-700));
+    }
+}
+
+
+.input-base[data-theme="2"], .input-base[data-theme="3"] {
+    .quill:has(.ql-editor:focus) {
+        border-color: rgb(var(--primary-main));
+    }
+}

@@ -1,0 +1,48 @@
+.scrollbar-container, .ps {
+    overflow: hidden !important;
+    overflow-anchor: none;
+    -ms-overflow-style: none;
+    touch-action: auto;
+    -ms-touch-action: auto;
+}
+
+.scrollbar-container.ps.ps--active-y>.ps__rail-y, .scrollbar-container>.ps.ps--active-y>.ps__rail-y {
+    width: 5px;
+    background-color: transparent!important;
+    z-index: 999;
+}
+
+.scrollbar-container:hover {
+    .ps__rail-x, .ps__rail-y {
+        opacity: 1;
+    }
+}
+
+.ps--active-x>.ps__rail-x, .ps--active-y>.ps__rail-y {
+    display: block;
+}
+
+.ps__rail-x, .ps__rail-y {
+    opacity: 0;
+    position: absolute;
+    right: 0 !important;
+    -webkit-transition: background-color .2s linear,opacity .2s linear;
+}
+
+.scrollbar-container .ps__thumb-y {
+    border-radius: 10;
+    right: 0;
+}
+
+.scrollbar-container .ps__rail-y.ps--clicking .ps__thumb-y, .scrollbar-container .ps__rail-y:focus>.ps__thumb-y, .scrollbar-container .ps__rail-y:hover>.ps__thumb-y, .scrollbar-container .ps__thumb-y {
+    background-color: rgba(var(--primary-main), 1);
+    width: 5px;
+}
+
+.ps__thumb-y {
+    -webkit-transition: background-color .2s linear,width .2s ease-in-out;
+}
+
+.ps__thumb-x, .ps__thumb-y {
+    position: absolute;
+}

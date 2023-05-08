@@ -1,0 +1,29 @@
+:root {
+    --rounded-main: 5px;
+}
+
+input {
+    outline: none;
+}
+
+select {
+    outline: none;
+}
+
+textarea {
+    outline: none;
+}
+
+select {
+    background: none;
+    // background: var(--select-icon);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 5px) center !important;
+    -moz-appearance:none !important;
+    -webkit-appearance: none !important; 
+    appearance: none !important;
+}
+
+select option {
+    background: rgba(var(--theme-bg-base));
+}
