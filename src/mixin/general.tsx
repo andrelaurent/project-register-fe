@@ -39,6 +39,7 @@ export const capitalize = (text:string) => {
 }
 
 export const groupBy = (arr:any[], key:string) => {
+    console.log(arr)
     const initialValue = {};
     var array:any[] = []
     return arr.reduce((acc, cval) => {

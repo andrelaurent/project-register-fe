@@ -43,7 +43,7 @@ const SignIn = () => {
         }
         
         try {
-            const res:any = await global.$baseAxios.get('/internaluser/v1/user/login', {auth: auth},)
+            const res:any = await global.$baseAxios.post('/user/login', {email: obj.email, password: obj.password},)
             localStorage.setItem('session', JSON.stringify(res?.data))
             global.session = res?.data as SessionModel
             navigate('/dashboard')
